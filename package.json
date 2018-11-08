@@ -1,0 +1,25 @@
+{
+  "name": "code-burger",
+  "version": "1.0.0",
+  "description": "List your desires and devour your knowledge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicholasangelo/Code-Burger.git"
+  },
+  "author": "nicholas angelo batten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicholasangelo/Code-Burger/issues"
+  },
+  "homepage": "https://github.com/Nicholasangelo/Code-Burger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
