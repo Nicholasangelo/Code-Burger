@@ -1,7 +1,7 @@
-<header class="jumbotron">
-    <h1>CODE</h1>
-    <a id="codeBurgerLogo" href="/"></a>
-    <h1>BURGERS</h1>
+<header class="row jumbotron">
+    <h1 class="col-sm-4">CODE</h1>
+    <a class="col-sm-4" id="codeBurgerLogo" href="/"></a>
+    <h1 class="col-sm-4">BURGERS</h1>
     
 </header>
 <div class="container">
@@ -12,7 +12,7 @@
                 <ul class="list-group">
                     {{#each burgers}} 
                     {{#unless devoured}} 
-                   <li class="list-group-item list-group-item-warning">{{burger_name}}</li> 
+                    {{> burgers/burger-block}}                    
                     {{/unless}} 
                     {{/each}}
                 </ul>
@@ -23,7 +23,7 @@
                     <input type="input" class="form-control" id="userBurger" placeholder="Enter a language/librbray/concept here">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" id="newBurgerBtn" class="btn btn-primary">Submit</button>
             </div>
         </div>
 
