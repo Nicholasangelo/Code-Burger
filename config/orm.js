@@ -1,4 +1,4 @@
-require("./connection");
+var connection = require("./connection");
 
 // Create an array of question marks, turn that array into a string to be used as placeholders in the future 
 function printQuestionMarks(num) {

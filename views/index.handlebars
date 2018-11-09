@@ -1,27 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="/assets/js/burgers.js"></script>
-
-    <title>Code Burgers</title>
-</head>
-
-<body>
-    <header>
-        <h1>C#DE/BURGER$</h1>
-        <img src="../public/img/DevourTrns.png" alt="Code Burger Logo">
-    </header>
-    <div class="container">
-        <div class="col-s-6">
+<header class="jumbotron">
+    <h1>CODE</h1>
+    <a id="codeBurgerLogo" href="/"></a>
+    <h1>BURGERS</h1>
+    
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
             <h2>Code to Devour</h2>
+            <div>
+                <ul class="list-group">
+                    {{#each burgers}} 
+                    {{#unless devoured}} 
+                   <li class="list-group-item list-group-item-warning">{{burger_name}}</li> 
+                    {{/unless}} 
+                    {{/each}}
+                </ul>
+            </div>
             <div class="form">
                 <div class="form-group">
                     <label for="tasteyBurger">Code to devour</label>
@@ -32,16 +27,20 @@
             </div>
         </div>
 
-        <div class="col-s-6">
+        <div class="col-sm-6">
             <h2>Code you've Devoured</h2>
-            <ul>
-                <li>
-
-                </li>
-            </ul>
+            <div>
+                <ul class="list-group">
+                    {{#each burgers}} 
+                    {{#if devoured}} 
+                   <li class="list-group-item list-group-item-info">{{burger_name}}</li> 
+                    {{/if}} 
+                    {{/each}}
+                </ul>
+            </div>
         </div>
-
-        </container>
+    </div>
+</div>
 
 </body>
 
