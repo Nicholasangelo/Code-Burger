@@ -7,3 +7,5 @@ List the code you'd like to devour and click to devour! Keep track of future lea
 Developed with Node Express Handlebars and mySql, Code Burgers is a full stack interactive Web App!
 
 For this project I hand rolled an ORM to deal with queries going to the mySql database and connected HTML using the Express-Handlebars npm package.
+
+Code Burgers is deployed through Heroku using an attatched JawsDb database connection
