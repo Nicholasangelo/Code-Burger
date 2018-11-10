@@ -1,3 +1,4 @@
+// creates a new burger based on user input
 $("#newBurgerBtn").on("click", function () {
     event.preventDefault;
     var newBurger = {
@@ -6,9 +7,9 @@ $("#newBurgerBtn").on("click", function () {
     }
 
 
-    // POST request to router.post("/api/items", ...) in burgers_controller.js
+    // POST request to router.post("/api/burgers", ...) in burgers_controller.js
     $.ajax("/api/burgers",
-        // and send POST body JSON with data: value as the newItem object
+        // and send POST body JSON with data
         {
             type: "POST",
             data: newBurger
@@ -23,15 +24,14 @@ $("#newBurgerBtn").on("click", function () {
             // and reload the page so selectAll() can display updated list
             location.reload();
 
-        }); // end .then promise handler function
+        });
 
 });
 
-// EVENT HANDLER FOR .change-status BUTTON
+// this is where we devour the burger and update the DB
 $(".devourBtn").on("click", function () {
         var id = $(this).data("id");
-        // var makeTrue = $(this).data("makeTrue");
-    
+    // change the devoured boolean to true or 1
         var newDevoured = {
           devoured: 1
         };
@@ -46,3 +46,19 @@ $(".devourBtn").on("click", function () {
           }
         );
       });
+
+// here we can delete burgers we don't like, I dont know if I need this feature, but... maybe also update? we will see
+$(".deleteBtn").on("click", function(event) {
+  var id = $(this).data("id");
+
+  // Send the DELETE request.
+  $.ajax("/api/burgers/" + id, {
+    type: "DELETE"
+  }).then(
+    function() {
+      console.log("deleted burger", id);
+      // Reload the page to get the updated list
+      location.reload();
+    }
+  );
+});

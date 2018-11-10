@@ -1,6 +1,26 @@
 #codeBurgerLogo {
     background-image: url('/img/Devour.png');
-    width: 14em;
+    width: 33em;
     background-size: cover;
-    height: 14em;
+    height: 15em;
+    position: relative;
+    left: 20.5em;
+    bottom: 3em;
+}
+.jumbotron {
+    height: 17em;
+    padding-top: 2em;
+    border-bottom: solid 21px;
+    position: sticky;
+}
+body {
+    background-color:#f7e4cd;
+    overflow: scroll;
+    font-family: 'Poppins', sans-serif;
+}
+.form {
+    padding-top: 2em;
+}
+li:hover {
+box-shadow: inset 1px 1px 4px gold;
 }
