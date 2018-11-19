@@ -1,5 +1,5 @@
 // creates a new burger based on user input
-$("#newBurgerBtn").on("click", function () {
+$("#newBurgerBtn").on("click", function (event) {
     event.preventDefault;
     var newBurger = {
         burger_name: $("#userBurger").val().trim(),
